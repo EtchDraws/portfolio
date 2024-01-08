@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(#7e1e91, #3c0570, #240d88, #1e6391, #bc43d4, #000000);
+    color: rgb(255, 255, 255);
+    background-image: url('yes.png');
+    background-repeat: repeat-y;
+
+
+
+    backdrop-filter: blur(10px);
+
+
+    background-size: 100%;
+    background-position: 0% 0%;
+    animation: zoom 250s infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #8681A1;
+    opacity: 85%;
+}
+
+p {
+    font-style: italic;
+    color: rgb(231, 178, 233);
+    text-shadow: 2px 2px 0 #000000;
+}
+
+h2 {
+    text-shadow: 2px 2px 0 #000000;
+    background-color: rgb(35, 33, 172);
+    color: rgb(231, 178, 233);
+}
+
+table,
+th,
+td {
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+}
+
+.text-with-bg {
+    background-image: url('textbackground.png');
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    -webkit-background-clip: text;
+
+}
+
+a:visited {
+    color: rgb(0, 183, 255);
+}
+
+a:link {
+    color: rgb(0, 183, 255);
+    background-color: rgb(28, 30, 173);
+    border-radius: 15px;
+}
+
+a:hover {
+
+    animation: colorchange 5s linear infinite;
+}
+
+section {
+    /*i cant tell if this is whats messing it up yet*/
+    float: left;
+    width: 33%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+footer {
+    clear: both;
+    padding-left: 20%;
+
+}
+
+@keyframes zoom {
+    0% {
+        background-size: 100%;
+        background-position: 50% 50%;
+    }
+
+
+
+    100% {
+        background-size: 300%;
+        background-position: 50% 50%;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    75% {
+        background-position: 150% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        color: rgb(0, 183, 255);
+    }
+
+    25% {
+        color: rgb(0, 89, 255)
+    }
+
+    50% {
+        color: rgb(0, 59, 255)
+    }
+
+    75% {
+        color: rgb(0, 89, 255)
+    }
+
+    100% {
+        color: rgb(0, 183, 255)
+    }
+}
+
+header {
+    background: linear-gradient(to right, #14169c 0%, #481e72 25%, #5f60d4 50%, #8037c9 75%, #14169c 100%);
+    background-size: 200% 100%;
+    animation: gradientMove 50s linear infinite;
+}
+
+main {
+    padding-top: 40px;
+}
